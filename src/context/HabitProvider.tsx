@@ -19,10 +19,10 @@ export function HabitProvider({ children }: HabitProviderProps) {
     setHabits((current) => [...current, newHabit]);
   }
 
-  function editHabit(id: string, name: string) {
+  function editHabit(id: string) {
     const newTitle = prompt("Enter new title for this habit:");
 
-    if (newTitle?.trim() !== "") {
+    if (newTitle && newTitle.trim() !== "") {
       setHabits((current) =>
         current.map((habit) =>
           habit.id === id ? { ...habit, name: newTitle } : habit,

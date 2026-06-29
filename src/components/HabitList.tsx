@@ -45,7 +45,7 @@ function HabitItem({ habit, visibleDates }: HabitItemProps) {
             <span className="text-sm text-amber-400">🔥 {streak}</span>
           )}
         </div>
-        <Button onClick={() => editHabit(habit.id, "newName")}>Edit</Button>
+        <Button onClick={() => editHabit(habit.id)}>Edit</Button>
         <Button
           onClick={() => deleteHabit(habit.id)}
           variant="ghost-destructive"

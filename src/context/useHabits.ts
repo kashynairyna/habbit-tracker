@@ -7,7 +7,7 @@ type Context = {
   addHabit: (name: string) => void;
   deleteHabit: (name: string) => void;
   toggleHabit: (name: string, date: Date) => void;
-  editHabit: (id: string, name: string) => void;
+  editHabit: (id: string) => void;
 };
 
 export const HabitContext = createContext<null | Context>(null);

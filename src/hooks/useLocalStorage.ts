@@ -2,7 +2,7 @@ import { parseISO } from "date-fns/fp/parseISO";
 import { useEffect, useState } from "react";
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
-  const [storedValue, setStoredValue] = useState(() => {
+  const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = localStorage.getItem(key);
       if (item == null) return initialValue;
